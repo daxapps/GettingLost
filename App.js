@@ -11,7 +11,7 @@ import TrackListScreen from './src/screens/TrackListScreen';
 import { StyleSheet, Text, View } from 'react-native';
 import { Provider as AuthProvider } from './src/context/AuthContext';
 import { setNavigator } from './src/navigationRef';
-// import ResolveAuthScreen from './src/screens/ResolveAuthScreen';
+import ResolveAuthScreen from './src/screens/ResolveAuthScreen';
 // import { Provider as LocationProvider } from './src/context/LocationContext';
 // import { Provider as TrackProvider } from './src/context/TrackContext';
 // import { FontAwesome } from '@expo/vector-icons';
@@ -22,7 +22,7 @@ const trackListFlow = createStackNavigator({
 });
 
 const switchNavigator = createSwitchNavigator({
-	// ResolveAuth: ResolveAuthScreen,
+	ResolveAuth: ResolveAuthScreen,
 	loginFlow: createStackNavigator({
 		Signup: SignupScreen,
 		Signin: SigninScreen
