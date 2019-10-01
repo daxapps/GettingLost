@@ -11,7 +11,7 @@ const Map = () => {
 	// 		longitude: -122.03121 + i * 0.001
 	// 	});
 	// }
-	const { state: { currentLocation } } = useContext(LocationContext);
+	const { state: { currentLocation, locations } } = useContext(LocationContext);
 	// console.log(state);
 
 	if (!currentLocation) {
@@ -40,7 +40,7 @@ const Map = () => {
 				strokeColor="rgba(158, 158, 255, 1.0)"
 				fillColor="rgba(158, 158, 255, 0.3)"
 			/>
-			{/* <Polyline coordinates={points} /> */}
+			<Polyline coordinates={locations.map((loc) => loc.coords)} />
 		</MapView>
 	);
 };
